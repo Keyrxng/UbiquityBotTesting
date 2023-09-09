@@ -7,7 +7,7 @@ import "../src/Counter.sol";
 import "../src/uupsProxy.sol";
 
 
-contract CounterScript is Script {
+contract CounterDeployScript is Script {
     Counter counter;
     Counter counterCast;
     UupsProxy proxy;
