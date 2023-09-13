@@ -11,13 +11,17 @@ contract Counter is Initializable, UUPSUpgradeable {
         _disableInitializers();
     }
 
-    function initialize(uint256 num) public initializer {
+    function initialize(uint256 num) internal initializer {
         __UUPSUpgradeable_init();
         number = num;
     }
 
     function setNumber(uint256 newNumber) public {
-        number = newNumber;
+        if(number != 0 || newNumber != 0) {
+            if(newNumber != 0 && number != 0) {
+                return;
+            }
+        }
     }
 
     function increment() public {

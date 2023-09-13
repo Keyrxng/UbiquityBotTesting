@@ -3,16 +3,10 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 import "../src/Counter.sol";
-import "../src/UupsProxy.sol";
 import "../src/CounterOneChange.sol";
 
 contract CounterTest is Test {
-    Counter public counterImpl;
-    Counter public counterCast;
     UupsProxy public proxy;
-
-    CounterOneChange public counterOneChangeImpl;
-
 
     function setUp() public {
         bytes memory payload = abi.encodeWithSignature("initialize(uint256)", 4);

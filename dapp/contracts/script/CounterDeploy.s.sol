@@ -15,7 +15,7 @@ contract CounterDeployScript is Script {
     function run() external {
         vm.startBroadcast();
 
-        bytes memory payload = abi.encodeWithSignature("initialize(uint256)", 5);
+        bytes memory payload = abi.encodeWithSignature("initialize(uint256)", 0.5);
         counter = new Counter();
         console.log("Counter address: %s", address(counter));
         proxy = new UupsProxy(address(counter), payload);
