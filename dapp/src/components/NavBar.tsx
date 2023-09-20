@@ -10,7 +10,7 @@ function Navbar() {
     backgroundColor: '#333',
     color: '#fff',
     padding: '10px 20px',
-    margin-left: '20px';
+    marginLeft: '20px'
   };
 
   const buttonStyle = {
@@ -21,8 +21,7 @@ function Navbar() {
     padding: '8px 12px',
     marginRight: '10px',
     cursor: 'pointer',
-    background-color: '#ccc';
-    margin: '5px'; 
+    margin: '5px'
   };
 
   return (
